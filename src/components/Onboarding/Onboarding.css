@@ -1,0 +1,130 @@
+/* Onboarding Styles */
+.onboarding-logo{
+  margin-bottom: 62px;
+  width: 480px;
+}
+
+.onboarding-step-two{
+  /* border: 1px solid red; */
+  border-radius: 20px;
+  width: 650px;
+  height: 600px;
+  background-color: #FFC500;
+  animation: animationIn .5s forwards;
+  position: relative;
+}
+
+@keyframes animationIn {
+  0%{
+    transform: translateY(-3000px);
+  }
+  60%{
+    transform: translateY(25px);
+  }
+  75%{
+    transform: translateY(-10px);
+  }
+  90%{
+    transform: translateY(5px);
+  }
+}
+
+.onboarding-title{
+  width: 382px;
+  font-size: 45px;
+  color: black;
+  font-weight: 800;
+  margin: 0 0 90px 0;
+  text-align: center;
+}
+
+.onboarding-text{
+  width: 484px;
+  font-size: 28px;
+  /* font-weight: 700; */
+  color: black;
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-family: 'Montserrat';
+}
+
+.onboarding-text.score{
+  margin: 20px 0;
+}
+
+.onboarding-text.long{
+  width: 510px;
+}
+
+.onboarding-top-rtg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+}
+
+.onboarding-top{
+  /* border: 1px solid red; */
+  height: 430px;
+  /* position: absolute; */
+}
+
+.three-enter {
+  opacity: 0.01;
+  transform: scale(0.9) translateX(50%);
+}
+.three-enter-active {
+  opacity: 1;
+  transform: scale(1) translateX(0%);
+  transition: all 300ms ease-out;
+}
+
+.three-exit {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+}
+.three-exit-active {
+  opacity: 0.01;
+  transform: scale(0.9) translateY(50%);
+  transition: all 300ms ease-out;
+}
+
+.two-exit {
+  opacity: 1;
+  transform: scale(1) translateX(0%);
+}
+.two-exit-active {
+  opacity: 0.01;
+  transform: scale(0.9) translateX(-50%);
+  transition: all 300ms ease-out;
+}
+
+.onboarding-bottom{
+  /* border: 1px solid red; */
+  height: 130px;
+}
+
+.onboarding-circles{
+  /* border: 1px solid red; */
+  width: 30px;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.circle{
+  width: 10px;
+  height: 10px;
+  border: 1px solid lightgray;
+  border-radius: 100%;
+  transition: .3s;
+  border: 1px solid #A48005;
+  background-color: #A48005;
+}
+
+.circle.selected{
+  border: 1px solid #000000;
+  background-color: #000000;
+}
