@@ -1,6 +1,6 @@
 export const ONBOARDING_STEP = 'ONBOARDING_STEP'
 export const LETS_PLAY = 'LETS_PLAY'
 export const SEE_RESULTS = 'SEE_RESULTS'
+export const LAST_FACT = 'LAST_FACT'
 export const REQUEST_DETAILS = 'REQUEST_DETAILS'
 export const RECEIVE_DETAILS = 'RECEIVE_DETAILS'
-export const NEXT_CARD = 'NEXT_CARD'

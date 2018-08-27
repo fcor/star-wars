@@ -14,6 +14,10 @@ export default function (state = initialState, action) {
         return {
           step: "RESULTS"
         }
+    case actionTypes.LAST_FACT:
+        return {
+          step: "DARTH"
+        }
     default:
       return state
   }

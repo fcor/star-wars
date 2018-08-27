@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Onboarding from './components/Onboarding'
 import Game from './components/Game'
 import Results from './components/Results'
+import DarthVader from './components/DarthVader'
 import { connect } from 'react-redux'
 import './App.css'
 
@@ -11,20 +12,14 @@ class App extends Component {
 
     const selectContent = (playground) =>{
       if (playground === 'ONBOARDING') {
-        return <Onboarding
-                  // toggleBg={this.toggleBg}
-                  // letsPlay={this.letsPlay}
-                />
+        return <Onboarding />
       } else if (playground === 'GAME') {
-        return <Game
-          // gameOver={this.gameOver}
-                />
+        return <Game />
       }
-      return <Results
-                // questions={questions}
-                // answers={answers}
-                // playAgain={this.playAgain}
-              />
+      else if (playground === 'RESULTS') {
+        return <Results />
+      }
+      return <DarthVader />
     }
 
     return (

@@ -11,3 +11,9 @@ export function seeResults() {
     type: actionTypes.SEE_RESULTS,
   }
 }
+
+export function lastFact() {
+  return {
+    type: actionTypes.LAST_FACT,
+  }
+}

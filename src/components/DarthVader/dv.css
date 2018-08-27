@@ -1,10 +1,12 @@
-.results{
+.dv{
   animation: fadeIn .25s ease-in forwards;
 
 }
 
-.results-spaceship{
+.dv-spaceship{
   /* width: 500px; */
+  height: 80vh;
+  padding-left: 40px;
 }
 
 @keyframes fadeIn {
@@ -16,8 +18,9 @@
   }
 }
 
-.results h1{
+.dv h1{
+  font-size: 50px;
   color: white;
-  margin: 50px 0;
+  margin: 0 30px 400px 0;
   text-align: center;
 }
