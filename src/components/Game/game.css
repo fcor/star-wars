@@ -1,0 +1,40 @@
+.game-card {
+  animation: animationIn .5s forwards;
+  background: #fff;
+  border-radius: 20px;
+  width: 400px;
+  height: 600px;
+  margin: 20px 0;
+}
+
+.game-card-logo{
+  animation: animationIn .5s forwards;
+  width: 200px;
+}
+
+.game-card-avatar {
+  width: 190px;
+}
+
+.game-card h1 {
+  color: black;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  border-bottom: 4px solid #FFC500;
+  text-align: center;
+  width: 270px;
+  margin: 8px 0;
+}
+
+.game-card p {
+  color: black;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  /* text-align: left; */
+  /* width: 100%; */
+  margin: 8px 0;
+}

@@ -36,3 +36,15 @@
   background: #292929;
   color: white;
 }
+
+.button.next{
+  background: #FFC500;
+  color: black;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 0px 60px 6px 60px;
+  /* width: 250px; */
+  height: 60px;
+  margin-top: 16px;
+}
