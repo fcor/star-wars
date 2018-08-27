@@ -10,6 +10,10 @@ export default function (state = initialState, action) {
         return {
           step: "GAME"
         }
+    case actionTypes.SEE_RESULTS:
+        return {
+          step: "RESULTS"
+        }
     default:
       return state
   }

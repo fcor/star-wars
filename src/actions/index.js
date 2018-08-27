@@ -1,10 +1,10 @@
 import { setStep } from './onboarding'
-import { letsPlay } from './playground'
-import { fetchDetails, nextCard } from './game'
+import { letsPlay, seeResults } from './playground'
+import { fetchDetails } from './game'
 
 export {
   setStep,
   letsPlay,
   fetchDetails,
-  nextCard
+  seeResults
 }

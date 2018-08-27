@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchDetails, nextCard } from '../../actions'
+import { fetchDetails, seeResults } from '../../actions'
 import BouncingLoader from '../BouncingLoader'
 import avatar from '../../assets/img/1.jpg'
 import logo from '../../assets/img/swlogo.png'
@@ -22,7 +22,11 @@ class Game extends React.Component {
 
   handleNext(){
     const { step } = this.props
-    this.props.dispatch(fetchDetails(step))
+    if (step < 5) {
+      this.props.dispatch(fetchDetails(step))
+    } else {
+      this.props.dispatch(seeResults())
+    }
   }
 
   render() {

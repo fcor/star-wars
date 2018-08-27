@@ -5,3 +5,9 @@ export function letsPlay() {
     type: actionTypes.LETS_PLAY,
   }
 }
+
+export function seeResults() {
+  return {
+    type: actionTypes.SEE_RESULTS,
+  }
+}
