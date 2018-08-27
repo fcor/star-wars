@@ -1,7 +1,10 @@
 import * as actionTypes from '../constants/actionTypes'
 
-export const requestDetails = () => ({
+export const requestDetails = (newStep) => ({
   type: actionTypes.REQUEST_DETAILS,
+  payload: {
+    step: newStep
+  }
 })
 
 export const receiveDetails = (json) => ({
@@ -12,8 +15,9 @@ export const receiveDetails = (json) => ({
 })
 
 export const fetchDetails = step => dispatch => {
-  dispatch(requestDetails())
-  return fetch(`https://swapi.co/api/people/${step}/`)
+  const newStep = step + 1
+  dispatch(requestDetails(newStep))
+  return fetch(`https://swapi.co/api/people/${newStep}/`)
     .then(response => response.json())
     .then(json => dispatch(receiveDetails(json)))
 }

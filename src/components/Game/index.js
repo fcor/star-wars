@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchDetails } from '../../actions'
+import { fetchDetails, nextCard } from '../../actions'
 import BouncingLoader from '../BouncingLoader'
 import avatar from '../../assets/img/1.jpg'
 import logo from '../../assets/img/swlogo.png'
@@ -8,9 +8,19 @@ import Button from '../Button'
 import './game.css'
 
 class Game extends React.Component {
+  constructor(props){
+    super(props)
+
+    this.handleNext = this.handleNext.bind(this)
+  }
 
   componentDidMount(){
     // console.log('hi');
+    const { step } = this.props
+    this.props.dispatch(fetchDetails(step))
+  }
+
+  handleNext(){
     const { step } = this.props
     this.props.dispatch(fetchDetails(step))
   }
@@ -29,6 +39,7 @@ class Game extends React.Component {
         <CardWithLoading
             isFetching={isFetching}
             details={details}
+            handleNext={this.handleNext}
             // handleAnswer={this.handleAnswer}
         />
       </div>
@@ -36,7 +47,7 @@ class Game extends React.Component {
   }
 }
 
-const Card = ({details}) =>{
+const Card = ({details, handleNext}) =>{
   // console.log(details);
   return(
     <div className="game-card column" style={{color: 'white'}}>
@@ -61,7 +72,7 @@ const Card = ({details}) =>{
         {`Gender: ${details.gender}`}
       </p>
       <Button
-        onClick={() => console.log('click')}
+        onClick={handleNext}
         variant="next"
         >
         Next
