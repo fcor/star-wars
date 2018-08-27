@@ -2,10 +2,27 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fetchDetails, seeResults } from '../../actions'
 import BouncingLoader from '../BouncingLoader'
-import avatar from '../../assets/img/1.jpg'
+import avatar1 from '../../assets/img/1.jpg'
+import avatar2 from '../../assets/img/2.jpg'
+import avatar3 from '../../assets/img/3.png'
+import avatar4 from '../../assets/img/4.jpg'
+import avatar5 from '../../assets/img/5.jpg'
 import logo from '../../assets/img/swlogo.png'
 import Button from '../Button'
 import './game.css'
+
+const selectAvatar = (step) => {
+  if (step === 1) {
+    return avatar1
+  } else if (step === 2) {
+    return avatar2
+  } else if (step === 3) {
+    return avatar3
+  } else if (step === 4) {
+    return avatar4
+  }
+  return avatar5
+}
 
 class Game extends React.Component {
   constructor(props){
@@ -30,7 +47,7 @@ class Game extends React.Component {
   }
 
   render() {
-    const { isFetching, details } = this.props
+    const { isFetching, details, step } = this.props
     return (
       <div className="column">
         { !isFetching &&
@@ -44,6 +61,7 @@ class Game extends React.Component {
             isFetching={isFetching}
             details={details}
             handleNext={this.handleNext}
+            step={step}
             // handleAnswer={this.handleAnswer}
         />
       </div>
@@ -51,12 +69,12 @@ class Game extends React.Component {
   }
 }
 
-const Card = ({details, handleNext}) =>{
+const Card = ({details, handleNext, step}) =>{
   // console.log(details);
   return(
     <div className="game-card column" style={{color: 'white'}}>
       <img
-        src={avatar}
+        src={selectAvatar(step)}
         alt="logo"
         className="game-card-avatar"
       />

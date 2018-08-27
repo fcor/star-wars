@@ -1,5 +1,4 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
 import { CSSTransition } from "react-transition-group"
 import Button from '../Button'
 import * as actions from '../../actions/'
@@ -57,7 +56,7 @@ const StepTwoThree = ({ actions, step }) => {
   const buttontext = selectButtonText(step)
   const selectHandler = (step === 'TWO')
                           ? () => actions.setStep(setNextStep(step))
-                          : () => actions.letsPlay() 
+                          : () => actions.letsPlay()
   return(
     <div className="onboarding-step-two column">
       <div className="onboarding-top column">
@@ -93,23 +92,23 @@ const StepTwoThree = ({ actions, step }) => {
 const Two = () =>
   <div className="onboarding-top-rtg">
     <p className="onboarding-title" >
-      Welcome to the Trivia challenge!
+      Welcome to Star Wars!
     </p>
     <p className="onboarding-text" >
-      You will be presented with 10 True or False questions.
+      You will be presented with some facts about the movies.
     </p>
   </div>
 
 const Three = () =>
   <div className="onboarding-top-rtg">
     <p className="onboarding-text long" >
-      We are going to test your knowledge on different categories.
+      We are going to show you some characters.
       <br/>
       <br/>
-      After that, you will get the results and play again.
+      After that, you will get the chance to know another one.
     </p>
     <p className="onboarding-text score" >
-      Can you score 100%?
+      Do you already know it?
     </p>
   </div>
 
