@@ -1,1 +1,2 @@
 export const ONBOARDING_STEP = 'ONBOARDING_STEP'
+export const LETS_PLAY = 'LETS_PLAY'

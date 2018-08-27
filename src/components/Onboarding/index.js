@@ -55,6 +55,9 @@ const StepOne = ({actions}) =>
 
 const StepTwoThree = ({ actions, step }) => {
   const buttontext = selectButtonText(step)
+  const selectHandler = (step === 'TWO')
+                          ? () => actions.setStep(setNextStep(step))
+                          : () => actions.letsPlay() 
   return(
     <div className="onboarding-step-two column">
       <div className="onboarding-top column">
@@ -78,7 +81,7 @@ const StepTwoThree = ({ actions, step }) => {
       <div className="onboarding-bottom column">
         <Circles step={step} />
         <Button
-          onClick={() => actions.setStep(setNextStep(step))}
+          onClick={selectHandler}
           >
             {buttontext}
           </Button>
